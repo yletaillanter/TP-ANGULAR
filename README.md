@@ -14,3 +14,7 @@ Run `grunt` for building and `grunt serve` for preview.
 ## Testing
 
 Running `grunt test` will run the unit tests with karma.
+
+## Backend 
+
+Use this project as a backend : [TP JPA](https://github.com/yletaillanter/TP-JPA-2) (jersey webservice)

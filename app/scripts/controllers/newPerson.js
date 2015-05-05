@@ -8,7 +8,7 @@
  * Controller of the yo2App
  */
 angular.module('yo2App')
-.controller('newPersonCtrl', function ($scope, $http) {
+.controller('newPersonCtrl', function ($scope, $http, $log) {
   $scope.title = 'Ajout d\'une personne';
   $scope.reponse = '';
 
@@ -17,15 +17,10 @@ angular.module('yo2App')
 
     $http.post('http://localhost:8080/rest/hello/insererpersonne', person).
       success(function() {
-      // this callback will be called asynchronously
-      // when the response is available
-        $scope.reponse = 'la personne est enregistré, vous devriez allez voir la liste pour voir par vous-même';
+        $log.reponse = 'Enregistrement OK';
       }).
       error(function() {
-      // called asynchronously if an error occurs
-      // or server returns response with an error status.
-          $scope.reponse = 'Une erreur est apparue, avez-vous bien le rest qui tourne sur localhost:8080 ? Si non, allez voir dans le code pour changer l\'url';
-
+        $log.debug = 'Error';
       });
   };
 });

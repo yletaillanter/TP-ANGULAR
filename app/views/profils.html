@@ -1,0 +1,11 @@
+<h2> {{title}} </h2>
+
+Chercher un contact : <input ng-model="query">
+
+  <ul>
+    <li ng-repeat="person in persons | filter:query">
+      <b>Id</b> : {{person.id}} <br>
+      <b>Nom</b> : {{person.name}} {{person.firstName}} <br>
+      <b>Email</b> : {{person.email}} <br>
+    </li>
+  </ul>

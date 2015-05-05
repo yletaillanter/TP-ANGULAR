@@ -1,0 +1,14 @@
+
+<div class="form" ng-controller="newPersonCtrl">
+<h2> {{title}} </h2>
+
+  <p>Attention, l'email doit être valide pour être envoyé</p>
+  <form novalidate class="simple-form">
+    Nom : <input type="text" ng-model="person.name" /><br />
+    Prénom : <input type="text" ng-model="person.firstName" /><br />
+    <input type="submit" ng-click="update(person)" value="Enregistrer" />
+  </form>
+  <pre>form = {{ person | json }}</pre>
+
+  <pre> {{ reponse }} </pre>
+</div>
